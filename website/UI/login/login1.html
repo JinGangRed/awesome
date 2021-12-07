@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0 0;
+
+    }
+
+    .page-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-135deg, #24A4AA,#1E3555);
+        height: 100%;
+        width: 100%;
+    }
+
+    .login-container {
+        background: #FFFFFF;
+        border-radius: 5px;
+        height: 40%;
+        width: 30%;
+        opacity: 0.8;
+    }
+
+    .login-title,.regist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5% 0;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    .regist{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .regist a{
+        text-decoration-line: none;
+        color: #666666;
+    }
+
+    .form-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0 0 0;
+        flex-direction: column;
+    }
+
+    .form-item label {
+        width: 10%;
+        height: 5%;
+    }
+
+    .form-item input {
+        width: 40%;
+        height: 2rem;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        background: #D2D2D2;
+        padding: 0.5rem 2rem;
+        opacity: 0.7;
+        display: block;
+    }
+    .form-item input[type="submit"]{
+        width: 45%;
+        height: 3rem;
+        background: #24A4AA;
+        word-wrap: break-word;
+        color:#FFFFFF;
+        font-weight: 700;
+        opacity: 1;
+    }
+    .form-item input[type="submit"]:hover{
+        background: #1E3555;
+    }
+    .form-item .valid-msg{
+        font-size: 11px;
+        padding:1rem 0 0 0;
+        color:red;
+        display: none;
+    }
+    .valid-msg i{
+        margin: 0 1rem 0 0;
+    }
+    .form-item input:invalid + .valid-msg{
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="page-container">
+        <div class="login-container">
+            <div class="login-title">
+                <span>欢迎登陆</span>
+            </div>
+            <form>
+                <div class="form-item">
+                    <input type="text" id="username" placeholder="请输入用户名/邮箱/手机号">
+                    <div class="valid-msg"><i>*</i>请输入正确的用户名/邮箱/手机号</div>
+                </div>
+                <div class="form-item">
+                    <input type="password" id="password" placeholder="请输入密码">
+                    <div class="valid-msg"><i>*</i>请输入正确的密码</div>
+                </div>
+                <div class="form-item">
+                    <input type="submit" value="登  陆">
+                </div>
+            </form>
+            <div class="regist">
+                <span><a href="#">忘记密码</a> | <a href="#">注册账户 </a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

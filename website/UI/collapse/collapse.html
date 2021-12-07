@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<style>
+    .header-nav {
+        width: 100%;
+        background: #455552;
+    }
+
+    .nav-ul {
+        list-style: none;
+    }
+
+    .nav-ul>li {
+        display: inline-block;
+    }
+
+    .nav-ul a {
+        color: #FFFFFF;
+        padding: 20px 10px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .nav-ul a:focus,
+    .nav-ul a:hover {
+        background: aqua;
+    }
+
+    .nav-ul a:focus+ul li {
+        opacity: 1;
+    }
+    .nav-ul a+ul {
+        list-style: none;
+        position: absolute;
+        transition: opacity 2s;
+    }
+    .nav-ul a+ul:active li {
+        opacity: 1;
+    }
+    .nav-ul a+ul li {
+        position: relative;
+        left: 0px;
+        opacity: 0;
+        width: 150px;
+        transition: opacity 2s;
+    }
+    .nav-ul a+ul a {
+        display: inline-block;
+        width: 75%;
+        background-color: rgba(26, 188, 156, 0.75);
+    }
+    .nav-ul a+ul a:hover {
+        background-color: rgba(69, 85, 82, 0.75);
+    }
+    .nav-ul a+ul > li{
+        border-bottom: 1px solid #FFFFFF;
+    }
+    .nav-ul a+ul > li:last-child{
+        border-radius: 10px;
+    }
+   
+</style>
+
+<body>
+    <nav class="header-nav">
+        <ul class="nav-ul">
+            <li>
+                <a href="https://www.baidu.com">
+                    Index
+                </a>
+            </li>
+            <li>
+                <a href="#">Web</a>
+                <ul>
+                    <li>
+                        <a href="#">Jquery</a>
+                    </li>
+                    <li>
+                        <a href="#">Ajax</a>
+                    </li>
+                    <li>
+                        <a href="#">Css</a>
+                    </li>
+                    <li>
+                        <a href="#">Vue</a>
+                    </li>
+                    <li>
+                        <a href="#">Angular   11222222</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

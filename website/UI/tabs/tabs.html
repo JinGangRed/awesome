@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        .tabs{
+            width: 100%;
+            display: flex;
+            margin: 0;
+            overflow: hidden;
+        }
+        .tab-item {
+           width: 50%; 
+           height: 100%;
+           border-bottom:1px solid red;
+           overflow: hidden;
+        }
+        .tab-item .tab-label{
+            display: block;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1rem;
+            padding: 2rem 0;
+        }
+        .tab-item input[type="radio"]{
+            -webkit-appearance: none;
+            display: block;
+            width: 100%;
+        }
+        .tab-item input[type="radio"]:hover,.tab-item input[type="radio"]:focus,.tab-item input[type="radio"]:checked{
+            border-bottom: 1px solid blue;
+            /* background: #FFFFFF; */
+        }
+         .tab-item input[type="radio"]:checked + .tab-content{
+            display: block;
+            /* margin-left: -100%; */
+        }
+        .tab-item .tab-content{
+            display: none;
+            padding: 2rem 0;
+            width: 100%;
+            position: absolute;
+            top: 5rem;
+            left: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <div class="tab-item">
+            <label for="1" class="tab-label">One</label>
+            <input id="1" type="radio" name="tab-radio" checked>
+            <div class="tab-content" >
+                <h4>Tab One</h4>
+            </div>
+        </div>
+
+        <div class="tab-item">
+            <label for="2" class="tab-label">Two</label>
+            <input  id="2" type="radio" name="tab-radio" >
+            <div class="tab-content"  >
+                <h4>Tab Two</h4>
+            </div>
+        </div>
+
+        <div class="tab-item">
+            <label for="3" class="tab-label">Three</label>
+            <input  id="3" type="radio" name="tab-radio">
+            <div class="tab-content"  >
+                <h4>Tab Three</h4>
+            </div>
+        </div>
+
+        <div class="tab-item">
+            <label for="4" class="tab-label">Four</label>
+            <input  id="4" type="radio" name="tab-radio">
+            <div class="tab-content"  >
+                <h4>Tab Four</h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
